@@ -19,7 +19,6 @@
           <div class="demo-cards mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
             <div class="demo-updates mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-desktop">
               <div class="mdl-card__title mdl-card--expand mdl-color--teal-300">
-
                 <h2 class="mdl-card__title-text">
 								<?php
 								echo $row_post['title'] ;
@@ -34,6 +33,16 @@
 								echo $row_post['time'] ;
 								echo "<br>" ;
 								?>
+								<a href="post_delete.php?board_id=<?php echo $board_id; ?>&post_id=<?php echo $post_id; ?>">
+									<button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+										<i class="material-icons">delete</i>
+									</button>
+								</a>
+								<a href="post_update.php?board_id=<?php echo $board_id; ?>&post_id=<?php echo $post_id; ?>">
+									<button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+										<i class="material-icons">edit</i>
+									</button>
+								</a>
 								</div>
 								<?php
 								echo $row_post['content'] ;
