@@ -3,7 +3,7 @@
   header('Content-Type: text/html; charset=utf-8');
   $db_host = "localhost" ;
   $db_user = "root" ;
-  $db_password = "ghkfkd12" ;
+  $db_password = "root" ;
   $db_name = "DBTermProject" ;
 
 	$db = new mysqli($db_host, $db_user, $db_password, $db_name);
