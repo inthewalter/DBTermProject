@@ -5,7 +5,10 @@
 		$board_id = $_GET['board_id'] ;
   }
 	else {
-	  $board_id = 1 ;
+		$sql = 'SELECT * FROM board' ;
+		$result = $db->query($sql) ;
+		$row = $result->fetch_assoc() ;
+	  $board_id = $row['id'] ;
 	}
   $sql = 'SELECT * FROM board' ;
   $result = $db->query($sql) ;
