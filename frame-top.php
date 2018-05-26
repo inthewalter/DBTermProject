@@ -66,9 +66,9 @@
             <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
               <i class="material-icons">search</i>
             </label>
-						<form>
+						<form action="./search_action.php" method="post">
             <div class="mdl-textfield__expandable-holder">
-              <input class="mdl-textfield__input" type="text" id="search">
+              <input class="mdl-textfield__input" type="text" name="search" id="search">
               <label class="mdl-textfield__label" for="search">Enter your query...</label>
             </div>
 						</form>
