@@ -36,14 +36,16 @@
   }
   ?>
 
-  <form action="comment_update.php" method="post" class="comment-form">
+  <form action="comment_create.php" method="post" class="comment-form">
+    <input type="hidden" name="board_id" value="<?php echo $board_id;?>">
+    <input type="hidden" name="post_id" value="<?php echo $post_id;?>">
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-      <input class="mdl-textfield__input" type="text" id="writer">
+      <input class="mdl-textfield__input" type="text" name="writer" id="writer">
       <label class="mdl-textfield__label" for="writer">comment writer</label>
     </div>
     <br>
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-      <textarea rows=10 class="mdl-textfield__input" id="content"></textarea>
+      <textarea rows=10 class="mdl-textfield__input" name="content" id="content"></textarea>
       <label for="content" class="mdl-textfield__label">comment content</label>
     </div>
     <br>
