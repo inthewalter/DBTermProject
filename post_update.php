@@ -15,10 +15,12 @@
     <input class="mdl-textfield__input" type="text" name ="title" id="title" value="<?php echo $row_update['title']; ?>">
     <label class="mdl-textfield__label" for="title">제목을 수정해주세요.</label>
   </div>
+  <br>
   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
     <input class="mdl-textfield__input" type="text" name ="writer" id="writer" value="<?php echo $row_update['writer']; ?>">
     <label class="mdl-textfield__label" for="writer">작성자를 수정해주세요.</label>
   </div>
+  <br>
   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
     <input class="mdl-textfield__input" type="text" name ="content" id="content" value="<?php echo $row_update['content']; ?>">
     <label class="mdl-textfield__label" for="content">내용을 수정해주세요.</label>

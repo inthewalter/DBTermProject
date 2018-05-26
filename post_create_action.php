@@ -14,8 +14,8 @@
 		)" ;
 	$result = $db->query($sql) or die($db->error) ;
 
-	// post로 바로 갈 수 있도록 바꿔야함
+	$last_id = $db->insert_id;
 	echo "<script>
-	location.replace('./board.php?board_id=".$board_id."') ;
+	location.replace('./post.php?post_id=".$last_id."') ;
 	</script>" ;
 ?>

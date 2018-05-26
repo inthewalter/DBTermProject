@@ -5,10 +5,8 @@
 	$sql = "INSERT INTO board (title) VALUES('".$title."')" ;
 	$result = $db->query($sql) or die($db->error) ;
 
-	// echo "<script>
-	// location.replace('./board.php?board_id=".$board_id."') ;
-	// </script>" ;
+	$last_id = $db->insert_id;
+	echo "<script>
+	location.replace('./board.php?board_id=".$last_id."') ;
+	</script>" ;
 ?>
-	<script>
-		location.replace("./board.php") ;
-	</script>

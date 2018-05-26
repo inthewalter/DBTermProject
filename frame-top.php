@@ -3,14 +3,14 @@
 
 	if (isset($_GET['board_id'])) {
 		$board_id = $_GET['board_id'] ;
-	}
+  }
 	else {
 	  $board_id = 1 ;
 	}
   $sql = 'SELECT * FROM board' ;
   $result = $db->query($sql) ;
 
-	$sql2 = 'SELECT title FROM board WHERE id = '.$board_id.';' ;
+	$sql2 = 'SELECT * FROM board WHERE id = '.$board_id.';' ;
 	$result2 = $db->query($sql2) ;
 	$row2 = $result2->fetch_assoc() ;
 ?>
@@ -54,11 +54,11 @@
   <body>
     <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
       <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
-	
         <div class="mdl-layout__header-row">
           <span class="mdl-layout-title">
 					<?php
-					echo "<a href='./board.php?board_id=".$board_id."'>".$row2['title']."</a>" ;
+            echo "<a href='./board.php?board_id=".$board_id."'>".$row2['title']."</a>" ;
+            echo "(".$row2['post_count'].")" ;
 					?>
 					</span>
           <div class="mdl-layout-spacer"></div>

@@ -22,6 +22,7 @@
                 <h2 class="mdl-card__title-text">
 								<?php
 								echo $row_post['title'] ;
+								echo "(".$row_post['comment_count'].")" ;
 								?>
 								</h2>
               </div>
