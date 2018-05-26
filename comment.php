@@ -19,8 +19,19 @@
     <div class="comment__text">
       <?php echo $row_comment['content']; ?>
     </div>
+		<a href="post_update.php?board_id=<?php echo $board_id; ?>&post_id=<?php echo $post_id; ?>">
+			<button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+				<i class="material-icons">edit</i>
+			</button>
+		</a>
+		<a href="post_delete.php?board_id=<?php echo $board_id; ?>&post_id=<?php echo $post_id; ?>">
+			<button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+				<i class="material-icons">delete</i>
+			</button>
+		</a>
   </div>
-  <hr>
+  <br>
+  <br>
   <?php
   }
   ?>
