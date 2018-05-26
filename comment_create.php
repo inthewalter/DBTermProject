@@ -13,7 +13,7 @@
 		)" ;
 	$result = $db->query($sql) or die($db->error) ;
 
-	// echo "<script>
-	// location.replace('./post.php?post_id=".$post_id."') ;
-	// </script>" ;
+	echo "<script>
+	location.replace('./post.php?post_id=".$post_id."') ;
+	</script>" ;
 ?>
