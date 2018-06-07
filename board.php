@@ -6,6 +6,12 @@
 					<i class="material-icons">add</i>POST CREATE
 				</button>
 			</a>
+			<a href="./empty_the_board.php?board_id=<?php echo $board_id;?>">
+				<button class="add-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+					<i class="material-icons">delete</i>EMPTY THE BOARD
+				</button>
+			</a>		
+			
 			<?php
 			$sql_post = 'SELECT * FROM post WHERE board_id = '.$board_id.';' ;
 			$result_post = $db->query($sql_post) ;

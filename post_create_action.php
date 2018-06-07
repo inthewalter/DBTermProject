@@ -16,6 +16,6 @@
 
 	$last_id = $db->insert_id;
 	echo "<script>
-	location.replace('./post.php?post_id=".$last_id."') ;
+	location.replace('./post.php?board_id=".$board_id."&post_id=".$last_id."') ;
 	</script>" ;
 ?>

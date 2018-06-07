@@ -69,7 +69,7 @@
             <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
               <i class="material-icons">search</i>
             </label>
-						<form action="./search_result.php" method="post">
+						<form action="./search_result.php?board_id=0" method="post">
             <div class="mdl-textfield__expandable-holder">
               <input class="mdl-textfield__input" type="text" name="search" id="search">
               <label class="mdl-textfield__label" for="search">Enter your query...</label>
@@ -102,6 +102,7 @@
     	  }
     	  ?>
 				<a class='mdl-navigation__link' href='./board_create.php'><i class="material-icons">add</i>Board Create</a>
+				<a class='mdl-navigation__link' href='./board_union.php'><i class="material-icons">add</i>Board_UNION</a>
         </nav>
       </div>
       <main class="mdl-layout__content mdl-color--grey-100">
