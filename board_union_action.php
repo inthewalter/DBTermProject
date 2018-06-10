@@ -7,8 +7,7 @@
 	$new_name = $_POST['new_name'] ;
 
 	do {
-		$db->query("SET autocommit = 0;") ;
-		$db->query("start transaction;") ;
+		$db->query("START TRANSACTION;") ;
 
 		#================================================================
 		$sql_1 = "SELECT * FROM board WHERE board.title = '$name_1'" ;
@@ -17,7 +16,6 @@
 	
 		if($num_of_board_1 == 0) {
 			$db->query("ROLLBACK;") ;
-			$db->query("SET autocommit = 1;") ;
 	
 			echo "<script> 
 						alert(\"첫 번째 게시판이 존재하지 않습니다.\")  
@@ -41,7 +39,6 @@
 	
 		if($num_of_board_2 == 0) {
 			$db->query("ROLLBACK;") ;
-			$db->query("SET autocommit = 1;") ;
 
 			echo "<script> 
 						alert(\"두 번째 게시판이 존재하지 않습니다.\")  
@@ -86,15 +83,18 @@
 			$result = $db->query($sql_delete) or die($db->error) ;
 
 			$db->query("COMMIT;") ;
-			$db->query("SET autocommit = 1;") ;
+	
+			echo "<script>
+			location.replace('./board.php?board_id=".$new_id."') ;
+			</script>" ;
+
 		} catch (Exception $e) {
 			$db->query("ROLLBACK;") ;
-			$db->query("SET autocommit = 1;") ;
+			
+			echo "<script>
+			location.replace('./board.php') ;
+			</script>" ;
 		}
-
-		echo "<script>
-		location.replace('./board.php?board_id=".$new_id."') ;
-		</script>" ;
 
 	}while(false);
 ?>
